@@ -1,12 +1,13 @@
 package com.renanrhoden.tweetfeelings.feature.tweetslisting
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.renanrhoden.tweetfeelings.R
 import com.renanrhoden.tweetfeelings.databinding.TweetsListingFragmentBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -14,7 +15,10 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class TweetsListingFragment : Fragment() {
 
     private val viewModel: TweetsListingViewModel by viewModel()
-    private lateinit var binding : TweetsListingFragmentBinding
+    private val adapter: TweetsListingAdapter by lazy {
+        TweetsListingAdapter(requireContext())
+    }
+    private lateinit var binding: TweetsListingFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +30,15 @@ class TweetsListingFragment : Fragment() {
             container,
             false
         )
+
+        binding.tweetsRecycler.adapter = adapter
+        binding.tweetsRecycler.layoutManager = LinearLayoutManager(requireContext())
+
+        viewModel.tweets.observe(this, Observer {
+            adapter.tweets = it
+        })
+
+        viewModel.fetchTweets()
 
         return binding.root
     }

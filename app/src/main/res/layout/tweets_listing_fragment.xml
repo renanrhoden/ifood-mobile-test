@@ -12,6 +12,7 @@
         tools:context="com.renanrhoden.tweetfeelings.feature.tweetslisting.TweetsListingFragment">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tweets_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
