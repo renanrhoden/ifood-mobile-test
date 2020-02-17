@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Tweet Feelings</string>
+    <string name="error_fetch">Error fetching tweets</string>
 </resources>

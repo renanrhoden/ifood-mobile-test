@@ -20,13 +20,15 @@ android {
         debug {
             debuggable true
             applicationIdSuffix ".debug"
-            buildConfigField "String", "SERVER_URL", '"https://api.twitter.com/1.1"'
+            buildConfigField "String", "TWITTER_SERVER_URL", '"https://api.twitter.com/1.1"'
+            buildConfigField "String", "LANGUAGE_GOOGLE_URL", '"https://language.googleapis.com"'
         }
         release {
             minifyEnabled true
             debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "SERVER_URL", '"https://api.twitter.com/1.1"'
+            buildConfigField "String", "TWITTER_SERVER_URL", '"https://api.twitter.com/1.1"'
+            buildConfigField "String", "LANGUAGE_GOOGLE_URL", '"https://language.googleapis.com"'
         }
     }
     dataBinding {

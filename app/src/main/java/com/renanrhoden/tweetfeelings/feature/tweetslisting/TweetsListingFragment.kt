@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -36,6 +37,10 @@ class TweetsListingFragment : Fragment() {
 
         viewModel.tweets.observe(this, Observer {
             adapter.tweets = it
+        })
+
+        viewModel.errorFetch.observe(this, Observer {
+            Toast.makeText(requireContext(), R.string.error_fetch, Toast.LENGTH_SHORT).show()
         })
 
         viewModel.fetchTweets()
