@@ -8,20 +8,10 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.loader.app.LoaderManager
-import androidx.loader.content.Loader
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.api.client.googleapis.auth.oauth2.GoogleCredential
-import com.google.api.services.language.v1.CloudNaturalLanguageScopes
-import com.google.api.services.language.v1.CloudNaturalLanguageScopes.*
 import com.renanrhoden.tweetfeelings.R
 import com.renanrhoden.tweetfeelings.databinding.TweetsListingFragmentBinding
-import com.renanrhoden.tweetfeelings.model.Feeling
-import com.renanrhoden.tweetfeelings.model.Feeling.*
-import com.renanrhoden.tweetfeelings.usecase.GetSentimentUseCase
-import com.renanrhoden.tweetfeelings.util.AccessTokenLoader
-import io.reactivex.rxkotlin.subscribeBy
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TweetsListingFragment : Fragment() {
@@ -36,6 +26,8 @@ class TweetsListingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        requireActivity().actionBar?.show()
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.tweets_listing_fragment,
@@ -51,19 +43,12 @@ class TweetsListingFragment : Fragment() {
         })
 
         viewModel.errorFetch.observe(this, Observer {
-            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-//            Toast.makeText(requireContext(), R.string.error_fetch, Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), R.string.error_fetch, Toast.LENGTH_SHORT).show()
         })
 
         viewModel.feeling.observe(this, Observer {
-            when (it) {
-                HAPPY -> {
-                }
-                NEUTRAL -> {
-                }
-                SAD -> {
-                }
-            }
+            val directions = TweetsListingFragmentDirections.actionTweetsListingFragmentToFeelingFragment(it)
+            findNavController().navigate(directions)
         })
 
         viewModel.fetchTweets()

@@ -7,10 +7,10 @@ import org.koin.dsl.module
 
 val repositoryModule = module {
     single { TweetsRepository(get()) }
-    single {
+    factory {
         NaturalLanguageRepository(
             get(named(NATURAL_LANGUAGE)),
-            get(named(CREDENTIAL_RESOURCE))
+            get()
         )
     }
 }

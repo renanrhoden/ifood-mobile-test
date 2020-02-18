@@ -1,7 +1,6 @@
 package com.renanrhoden.tweetfeelings.injection
 
 import com.renanrhoden.tweetfeelings.BuildConfig
-import com.renanrhoden.tweetfeelings.service.NaturalLanguageService
 import com.renanrhoden.tweetfeelings.service.TwitterService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -45,10 +44,5 @@ val networkModule = module {
     single {
         val retrofit: Retrofit = get(named(TWITTER_SERVER))
         retrofit.create(TwitterService::class.java)
-    }
-
-    single {
-        val retrofit: Retrofit = get(named(GOOGLE_NL))
-        retrofit.create(NaturalLanguageService::class.java)
     }
 }

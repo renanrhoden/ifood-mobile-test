@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -34,6 +36,15 @@ android {
     dataBinding {
         enabled = true
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    buildToolsVersion = '28.0.3'
 }
 
 dependencies {
@@ -75,7 +86,7 @@ dependencies {
         exclude module: 'httpclient'
         exclude module: 'jsr305'
     }
-    implementation("com.google.api-client:google-api-client-android:$googleApiClientVersion"){
+    implementation("com.google.api-client:google-api-client-android:$googleApiClientVersion") {
         exclude module: 'httpclient'
         exclude module: 'jsr305'
     }
@@ -84,6 +95,9 @@ dependencies {
         exclude module: 'jsr305'
     }
     implementation 'com.google.http-client:google-http-client-gson:1.19.0'
+
+    implementation 'se.akerfeldt:okhttp-signpost:1.1.0'
+    implementation 'oauth.signpost:signpost-core:1.2.1.2'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

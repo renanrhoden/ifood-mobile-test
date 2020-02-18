@@ -1,7 +1,7 @@
 package com.renanrhoden.tweetfeelings.repository
 
-import android.content.Context
 import android.content.SharedPreferences
+import android.content.res.Resources
 import android.util.Log
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential
 import com.google.api.client.http.javanet.NetHttpTransport
@@ -11,15 +11,15 @@ import com.google.api.services.language.v1.CloudNaturalLanguageScopes
 import com.google.api.services.language.v1.model.AnalyzeSentimentRequest
 import com.google.api.services.language.v1.model.Document
 import com.google.api.services.language.v1.model.Sentiment
+import com.renanrhoden.tweetfeelings.R
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import java.io.IOException
-import java.io.InputStream
 
 class NaturalLanguageRepository(
     private val prefs: SharedPreferences,
-    private val stream: InputStream
+    private val resources: Resources
 ) {
 
     private val TAG = "NaturalLanguage"
@@ -84,16 +84,11 @@ class NaturalLanguageRepository(
         // of this client app. You should never do this in your app. Instead, store the file in your
         // server and obtain an access token from there.
         // *******************
-        // ***** WARNING *****
-// In this sample, we load the credential from a JSON file stored in a raw resource folder
-// of this client app. You should never do this in your app. Instead, store the file in your
-// server and obtain an access token from there.
-// *******************
+
         try {
-            if (credential == null) {
-                credential = GoogleCredential.fromStream(stream)
-                    .createScoped(CloudNaturalLanguageScopes.all())
-            }
+            credential = GoogleCredential.fromStream(resources.openRawResource(R.raw.credential))
+                .createScoped(CloudNaturalLanguageScopes.all())
+
             credential?.refreshToken()
             val accessToken = credential?.accessToken
             prefs.edit().putString(PREF_ACCESS_TOKEN, accessToken).apply()
