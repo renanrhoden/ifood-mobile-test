@@ -10,7 +10,7 @@ import com.renanrhoden.tweetfeelings.databinding.TweetItemBinding
 import com.renanrhoden.tweetfeelings.feature.tweetslisting.TweetsListingAdapter.ViewHolder
 import com.renanrhoden.tweetfeelings.model.Tweet
 
-class TweetsListingAdapter(context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class TweetsListingAdapter(context: Context, private val onClickListener: (Tweet) -> Unit) : RecyclerView.Adapter<ViewHolder>() {
 
     private val inflater = LayoutInflater.from(context)
 
@@ -34,14 +34,17 @@ class TweetsListingAdapter(context: Context) : RecyclerView.Adapter<ViewHolder>(
     override fun getItemCount() = tweets.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(tweets[position])
+        holder.bind(tweets[position], onClickListener)
     }
 
     class ViewHolder(private val binding: TweetItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(tweet: Tweet) {
+        fun bind(tweet: Tweet, onClickListener: (Tweet) -> Unit) {
             binding.tweet = tweet
+            binding.root.setOnClickListener {
+                onClickListener(tweet)
+            }
         }
     }
 }

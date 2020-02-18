@@ -16,6 +16,8 @@ import com.google.api.services.language.v1.CloudNaturalLanguageScopes
 import com.google.api.services.language.v1.CloudNaturalLanguageScopes.*
 import com.renanrhoden.tweetfeelings.R
 import com.renanrhoden.tweetfeelings.databinding.TweetsListingFragmentBinding
+import com.renanrhoden.tweetfeelings.model.Feeling
+import com.renanrhoden.tweetfeelings.model.Feeling.*
 import com.renanrhoden.tweetfeelings.usecase.GetSentimentUseCase
 import com.renanrhoden.tweetfeelings.util.AccessTokenLoader
 import io.reactivex.rxkotlin.subscribeBy
@@ -26,10 +28,8 @@ class TweetsListingFragment : Fragment() {
 
     private val viewModel: TweetsListingViewModel by viewModel()
     private val adapter: TweetsListingAdapter by lazy {
-        TweetsListingAdapter(requireContext())
+        TweetsListingAdapter(requireContext(), viewModel::getSentiment)
     }
-    private val LOADER_ACCESS_TOKEN = 1
-    private val ln: GetSentimentUseCase by inject()
     private lateinit var binding: TweetsListingFragmentBinding
 
     override fun onCreateView(
@@ -51,37 +51,20 @@ class TweetsListingFragment : Fragment() {
         })
 
         viewModel.errorFetch.observe(this, Observer {
-            Toast.makeText(requireContext(), R.string.error_fetch, Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(requireContext(), R.string.error_fetch, Toast.LENGTH_SHORT).show()
         })
 
-        LoaderManager.getInstance(this)
-            .initLoader(LOADER_ACCESS_TOKEN, null, object : LoaderManager.LoaderCallbacks<String> {
-                override fun onCreateLoader(id: Int, args: Bundle?): Loader<String> {
-                    return AccessTokenLoader(requireActivity())
+        viewModel.feeling.observe(this, Observer {
+            when (it) {
+                HAPPY -> {
                 }
-
-                override fun onLoadFinished(loader: Loader<String>, data: String?) {
-                    ln.credential = GoogleCredential()
-                        .setAccessToken(data)
-                        .createScoped(all())
-                    ln.getSentiment().subscribeBy(
-                        onSuccess = {
-                            Toast.makeText(requireActivity(), "${it.score}", Toast.LENGTH_LONG)
-                                .show()
-                        },
-                        onError = {
-                            Toast.makeText(requireActivity(), "${it.message}", Toast.LENGTH_LONG)
-                                .show()
-                        }
-                    )
+                NEUTRAL -> {
                 }
-
-                override fun onLoaderReset(loader: Loader<String>) {
+                SAD -> {
                 }
-
-            })
-
-
+            }
+        })
 
         viewModel.fetchTweets()
 
