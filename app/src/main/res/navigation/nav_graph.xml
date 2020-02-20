@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/tweetsListingFragment">
 
     <fragment
         android:id="@+id/tweetsListingFragment"
         android:name="com.renanrhoden.tweetfeelings.feature.tweetslisting.TweetsListingFragment"
-        android:label="TweetsListingFragment" >
+        android:label="TweetsListingFragment">
         <action
             android:id="@+id/action_tweetsListingFragment_to_feelingFragment"
             app:destination="@id/feelingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
             app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@+id/tweetsListingFragment" />
     </fragment>
     <fragment
         android:id="@+id/feelingFragment"
         android:name="com.renanrhoden.tweetfeelings.feature.FeelingFragment"
-        android:label="FeelingFragment" >
+        android:label="FeelingFragment">
         <argument
             android:name="score"
             app:argType="float" />
