@@ -10,8 +10,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.renanrhoden.tweetfeelings.R
 import com.renanrhoden.tweetfeelings.databinding.TweetsListingFragmentBinding
+import com.renanrhoden.tweetfeelings.util.EndlessRecyclerViewScrollListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class TweetsListingFragment : Fragment() {
@@ -27,7 +29,6 @@ class TweetsListingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        requireActivity().actionBar?.show()
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.tweets_listing_fragment,
@@ -38,8 +39,22 @@ class TweetsListingFragment : Fragment() {
         binding.tweetsRecycler.adapter = adapter
         binding.tweetsRecycler.layoutManager = LinearLayoutManager(requireContext())
 
+        observeViewModel()
+
+        binding.tweetsRecycler.addOnScrollListener(object : EndlessRecyclerViewScrollListener(
+            binding.tweetsRecycler.layoutManager as LinearLayoutManager
+        ) {
+            override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView?) {
+                viewModel.fetchTweets()
+            }
+        })
+
+        return binding.root
+    }
+
+    private fun observeViewModel() {
         viewModel.tweets.observe(this, Observer {
-            adapter.tweets = it
+            adapter.updateItems(it)
         })
 
         viewModel.errorFetch.observe(this, Observer {
@@ -47,13 +62,15 @@ class TweetsListingFragment : Fragment() {
         })
 
         viewModel.feeling.observe(this, Observer {
-            val directions = TweetsListingFragmentDirections.actionTweetsListingFragmentToFeelingFragment(it)
+            val directions =
+                TweetsListingFragmentDirections.actionTweetsListingFragmentToFeelingFragment(it)
             findNavController().navigate(directions)
         })
+    }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         viewModel.fetchTweets()
-
-        return binding.root
     }
 
 }

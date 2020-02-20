@@ -1,10 +1,10 @@
 package com.renanrhoden.tweetfeelings.injection
 
 import com.renanrhoden.tweetfeelings.usecase.GetSentimentUseCase
-import com.renanrhoden.tweetfeelings.usecase.GetTweetsUSeCase
+import com.renanrhoden.tweetfeelings.usecase.GetTweetsUseCase
 import org.koin.dsl.module
 
 val useCaseModule = module {
-    single { GetTweetsUSeCase(get()) }
+    single { GetTweetsUseCase(get()) }
     single { GetSentimentUseCase(get()) }
 }

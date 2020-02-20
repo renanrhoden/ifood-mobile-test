@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.renanrhoden.tweetfeelings.R
 import com.renanrhoden.tweetfeelings.databinding.TweetItemBinding
@@ -14,11 +15,7 @@ class TweetsListingAdapter(context: Context, private val onClickListener: (Tweet
 
     private val inflater = LayoutInflater.from(context)
 
-    var tweets = listOf<Tweet>()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    private var tweets = mutableListOf<Tweet>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -35,6 +32,14 @@ class TweetsListingAdapter(context: Context, private val onClickListener: (Tweet
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(tweets[position], onClickListener)
+    }
+
+    fun updateItems(newItems: List<Tweet>) {
+        val diffResult = DiffUtil.calculateDiff(
+            TweetsDiffUtilCallback(tweets, newItems)
+        )
+        diffResult.dispatchUpdatesTo(this)
+        tweets = newItems.toMutableList()
     }
 
     class ViewHolder(private val binding: TweetItemBinding) :
