@@ -11,34 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a79be786-f21c-4c73-9d35-177e08d8f525" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsDiffUtilCallback.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/util/EndlessRecyclerViewScrollListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/injection/networkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/injection/networkModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/injection/useCaseModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/injection/useCaseModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/model/Tweet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/model/Tweet.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/repository/TweetsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/repository/TweetsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/service/TwitterService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/service/TwitterService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/usecase/GetTweetsUSeCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/usecase/GetTweetsUseCase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/util/AccessTokenLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/credential.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/credential.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
+    <ignored path="app/src/main/res/raw/credential.json" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,15 +169,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/repository/TweetsRepository.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -212,11 +178,20 @@
           <provider editor-type-id="android-manifest" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -265,7 +240,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/usecase/GetSentimentUseCase.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/injection/viewModelModule.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/model/Feeling.kt" />
-        <option value="$PROJECT_DIR$/app/.gitignore" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_happy.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/HappyFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_feeling.xml" />
@@ -292,6 +266,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/renanrhoden/tweetfeelings/feature/tweetslisting/TweetsListingViewModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/.gitignore" />
       </list>
     </option>
   </component>
@@ -301,7 +276,7 @@
     <option name="height" value="1082" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -435,146 +410,20 @@
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="raw" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
             <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="feature" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="feature" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetslisting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="injection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="usecase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="com" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="renanrhoden" type="462c0819:PsiDirectoryNode" />
-              <item name="tweetfeelings" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="raw" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ifood-mobile-test-app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="ifood-mobile-test" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="ifood-mobile-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ifood-mobile-test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="values" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -591,7 +440,7 @@
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="PsdUISettings">
@@ -818,7 +667,7 @@
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49947533" visible="true" weight="0.3335112" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49947533" visible="true" weight="0.3335112" />
       <window_info id="Structure" order="2" sideWeight="0.50052464" side_tool="true" weight="0.3335112" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -830,9 +679,9 @@
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4994664" weight="0.88562435" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.50472194" />
-      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4994664" visible="true" weight="0.32738718" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4994664" weight="0.32738718" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50053364" side_tool="true" weight="0.88562435" />
-      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32843652" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="6" visible="true" weight="0.32843652" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32948583" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.96852046" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32948583" />
@@ -1041,13 +890,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="70" column="10" lean-forward="true" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1300,6 +1142,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="62" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="63" column="36" lean-forward="true" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
         </state>
       </provider>
     </entry>
