@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/feelingFragment"
-        android:name="com.renanrhoden.tweetfeelings.feature.FeelingFragment"
+        android:name="com.renanrhoden.tweetfeelings.feature.feeling.FeelingFragment"
         android:label="FeelingFragment">
         <argument
             android:name="score"

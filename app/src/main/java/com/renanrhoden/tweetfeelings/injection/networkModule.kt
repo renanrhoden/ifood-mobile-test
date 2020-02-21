@@ -1,6 +1,10 @@
 package com.renanrhoden.tweetfeelings.injection
 
 import com.renanrhoden.tweetfeelings.BuildConfig
+import com.renanrhoden.tweetfeelings.auth.twitterConsumerKey
+import com.renanrhoden.tweetfeelings.auth.twitterConsumerSecret
+import com.renanrhoden.tweetfeelings.auth.twitterToken
+import com.renanrhoden.tweetfeelings.auth.twitterTokenSecret
 import com.renanrhoden.tweetfeelings.service.TwitterService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -13,17 +17,9 @@ import se.akerfeldt.okhttp.signpost.OkHttpOAuthConsumer
 import se.akerfeldt.okhttp.signpost.SigningInterceptor
 
 val networkModule = module {
-    val oauth_consumer_key = "dKos3bjIlMMzirWCxKORebZcA"
-    val oauth_nonce = ""
-    val oauth_signature = " "
 
     val TWITTER_SERVER = "TWITTER_SERVER"
     val GOOGLE_NL = "GOOGLE_NL"
-
-//    val logging = HttpLoggingInterceptor()
-//    logging.level = HttpLoggingInterceptor.Level.BODY
-//    val httpClient = OkHttpClient.Builder()
-//    httpClient.addInterceptor(logging)
 
     single(named(GOOGLE_NL)) {
         val logging = HttpLoggingInterceptor()
@@ -46,12 +42,12 @@ val networkModule = module {
         httpClient.addInterceptor(logging)
 
         val auth = OkHttpOAuthConsumer(
-            "dKos3bjIlMMzirWCxKORebZcA",
-            "AssG4iZNWmKME0fdDopDKbhSfCyyDmgil9QcZwyGnvRYM7BVUc"
+            twitterConsumerKey,
+            twitterConsumerSecret
         )
         auth.setTokenWithSecret(
-            "124021187-OXxReQ76Uxct9BrHI444tjIHc6pRK5Eohd2fyl8S",
-            "ss9UwNYtsQzEDy8w6r0yrCDDqWPIb8jTHk0sEHhYp0FmJ"
+            twitterToken,
+            twitterTokenSecret
         )
         httpClient.addInterceptor(SigningInterceptor(auth))
         Retrofit.Builder()

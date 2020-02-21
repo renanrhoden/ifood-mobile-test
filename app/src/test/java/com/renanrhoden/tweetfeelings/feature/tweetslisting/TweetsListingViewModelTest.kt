@@ -7,6 +7,7 @@ import com.renanrhoden.tweetfeelings.usecase.GetSentimentUseCase
 import com.renanrhoden.tweetfeelings.usecase.GetTweetsUseCase
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.spyk
 import io.mockk.verify
 import io.reactivex.Single
 import org.assertj.core.api.Assertions.assertThat
@@ -24,7 +25,7 @@ class TweetsListingViewModelTest {
 
     private var getTweetsUseCase: GetTweetsUseCase = mockk()
     private var getSentimentUseCase: GetSentimentUseCase = mockk()
-    private var viewModel = TweetsListingViewModel(getTweetsUseCase, getSentimentUseCase)
+    private var viewModel = spyk(TweetsListingViewModel(getTweetsUseCase, getSentimentUseCase))
 
     @Before
     fun setup() {
@@ -79,5 +80,22 @@ class TweetsListingViewModelTest {
         viewModel.user.value = "Mock"
         viewModel.getSentiment(Tweet("Text", 2819))
         assertThat(viewModel.loading.value).isFalse()
+    }
+
+    @Test
+    fun whenUsernameNotEmpty_mustFetchTweets() {
+        every { getTweetsUseCase.getTweets(any(), any()) } returns Single.just(listOf(Tweet("mock", 101)))
+        viewModel.user.value = "hahaa"
+        viewModel.fetchTweetsFromUser()
+        assertThat(viewModel.tweets.value?.first()?.text).isEqualTo("mock")
+        assertThat(viewModel.tweets.value?.first()?.id).isEqualTo(101)
+    }
+    @Test
+    fun whenRefresh_mustFetchTweets() {
+        every { getTweetsUseCase.getTweets(any(), any()) } returns Single.just(listOf(Tweet("mock", 101)))
+        viewModel.user.value = "hahaa"
+        viewModel.refreshTweets()
+        assertThat(viewModel.tweets.value?.first()?.text).isEqualTo("mock")
+        assertThat(viewModel.tweets.value?.first()?.id).isEqualTo(101)
     }
 }
