@@ -13,8 +13,6 @@ import com.google.api.services.language.v1.model.Document
 import com.google.api.services.language.v1.model.Sentiment
 import com.renanrhoden.tweetfeelings.R
 import io.reactivex.Single
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import java.io.IOException
 
 class NaturalLanguageRepository(
@@ -35,8 +33,6 @@ class NaturalLanguageRepository(
             credential?.initialize(it)
         }.build()
         return getAnalyzeSentiment(tweet, api)
-            .subscribeOn(Schedulers.newThread())
-            .observeOn(AndroidSchedulers.mainThread())
 
     }
 
@@ -63,6 +59,12 @@ class NaturalLanguageRepository(
             }
         }
     }
+
+    /*
+    Code found at
+
+        https://github.com/GoogleCloudPlatform/android-docs-samples/tree/master/nl/Language
+    */
 
     private fun getToken(): String? {
         val currentToken =
